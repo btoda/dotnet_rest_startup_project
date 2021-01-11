@@ -1,0 +1,51 @@
+@using System.Reflection
+<html>
+
+<head>
+    <title>@Model.ServiceName</title>
+    <style>
+        table {
+            border-spacing: 0px;
+            border-collapse: separate;
+            width: 80%;
+        }
+
+        table tr td:first-child {
+            font-weight: bold;
+            color: red;
+            width: 700px;
+        }
+
+        table tr td:last-child {
+            width: 150px;
+        }
+
+        table td,
+        table th {
+            border: 1px solid black;
+            padding: 5px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body style="margin-bottom:100px">
+    <h1>@Model.ServiceName</h1>
+    <p>
+        @Model.ServiceDescription
+    </p>
+    <h2>Service Details</h2>
+    <p>Version : @Model.Version</p>
+    <p>Runtime : @Model.Framework</p>
+    <p>Environment : <span style="font-size:20px; color:red;font-weight:bold;"> @Model.Environment </span></p>
+    <h2>Documentation</h2>
+    <p>The service is documented using <strong>Swagger</strong>. Swagger is a popular library that makes api
+        documentation and testing easy and straight forward.</p>
+    <p>
+        For this service, the swagger documentation can be found here:<br><br>
+        <a style="cursor:pointer;font-weight:bold" href="@Model.SwaggerController/@Model.SwaggerAction">Swagger
+            Documentation</a>
+    </p>
+</body>
+
+</html>

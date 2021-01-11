@@ -1,0 +1,8 @@
+bin
+obj
+*.pem
+*.cer
+*.key
+*.ppk
+*.ovpn
+*.sh
